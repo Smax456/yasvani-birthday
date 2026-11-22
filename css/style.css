@@ -1,0 +1,369 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap');
+
+:root {
+  --sky: #dcecff;
+  --blue: #a9c9ed;
+  --blue-dark: #57789e;
+  --pink: #f5d0dc;
+  --pink-dark: #d98eaa;
+  --cream: #fffaf1;
+  --ink: #52647d;
+  --paper: #fffdfb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: 'DM Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+button, a {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: clamp(45px, 10vw, 78px);
+  line-height: 1.12;
+}
+
+h2 {
+  font-size: clamp(32px, 7vw, 52px);
+}
+
+p {
+  line-height: 1.9;
+}
+
+section {
+  min-height: 100svh;
+  padding: 110px 22px 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  scroll-margin-top: 55px;
+}
+
+.sky {
+  background: linear-gradient(145deg, #dcecff, #f6eaf0);
+}
+
+.blush {
+  background: linear-gradient(145deg, #fff0f4, #e3efff);
+}
+
+.paper {
+  background: linear-gradient(145deg, #fffaf1, #edf3ff);
+}
+
+.inner {
+  width: 100%;
+  max-width: 850px;
+  margin: auto;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 10px;
+  color: #899cb6;
+  margin-bottom: 22px;
+}
+
+.accent {
+  color: var(--pink-dark);
+  font-style: italic;
+}
+
+.subtitle {
+  max-width: 520px;
+  margin: 20px auto;
+  font-size: 15px;
+  color: #7789a2;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 24px;
+  padding: 14px 26px;
+  border: 1px solid white;
+  border-radius: 40px;
+  color: white;
+  background: linear-gradient(120deg, #86acd7, #d99db8);
+  box-shadow: 0 8px 24px #9aacc733;
+  transition: transform .3s;
+}
+
+.btn:active {
+  transform: scale(.96);
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 50;
+  padding: 14px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fffaf1dd;
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid #ffffffaa;
+}
+
+.brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 19px;
+  color: var(--blue-dark);
+}
+
+.navlinks {
+  display: flex;
+  gap: 15px;
+}
+
+.navlinks a {
+  font-size: 11px;
+  color: #7588a2;
+}
+
+.progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0;
+  background: var(--pink-dark);
+  z-index: 100;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity .8s, transform .8s;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.heart {
+  font-size: 55px;
+  margin: 25px;
+  animation: heartbeat 1.8s infinite;
+}
+
+@keyframes heartbeat {
+  50% { transform: scale(1.15); }
+}
+
+.decor {
+  position: absolute;
+  opacity: .7;
+  pointer-events: none;
+  animation: float 7s ease-in-out infinite;
+}
+
+.d1 { top: 15%; left: 8%; font-size: 34px; }
+.d2 { bottom: 15%; right: 8%; font-size: 32px; }
+
+@keyframes float {
+  50% { transform: translateY(-18px) rotate(10deg); }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 13px;
+  margin-top: 30px;
+}
+
+.tile {
+  padding: 25px 14px;
+  border-radius: 20px;
+  background: #ffffffa9;
+  border: 1px solid white;
+  box-shadow: 0 8px 25px #829cbd12;
+}
+
+.tile span {
+  font-size: 28px;
+}
+
+.tile p {
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+.timeline {
+  text-align: left;
+  max-width: 470px;
+  margin: 35px auto;
+  padding-left: 24px;
+  border-left: 2px solid var(--pink);
+}
+
+.memory {
+  padding-bottom: 25px;
+  position: relative;
+}
+
+.memory::before {
+  content: "♡";
+  position: absolute;
+  left: -33px;
+  background: var(--cream);
+  color: var(--pink-dark);
+}
+
+.memory h3 {
+  font-size: 20px;
+}
+
+.memory p {
+  font-size: 13px;
+  color: #8492a6;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 13px;
+  margin: 30px auto;
+}
+
+.photo {
+  min-height: 155px;
+  padding: 10px;
+  border-radius: 15px;
+  background: #ffffffba;
+  border: 1px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.photo img {
+  width: 100%;
+  height: 145px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.wish-card, .letter-card {
+  max-width: 420px;
+  margin: 30px auto;
+  padding: 30px 22px;
+  border-radius: 23px;
+  background: #ffffffb9;
+  border: 1px solid white;
+  box-shadow: 0 10px 35px #829cbd22;
+}
+
+#wishText {
+  min-height: 95px;
+  display: grid;
+  place-items: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  color: var(--blue-dark);
+}
+
+.cake {
+  font-size: 100px;
+  margin: 25px;
+  animation: float 3s infinite;
+}
+
+#letterText {
+  display: none;
+  text-align: left;
+  font-size: 14px;
+}
+
+#letterText p {
+  margin: 12px 0;
+}
+
+.star-sky {
+  max-width: 430px;
+  height: 260px;
+  margin: 30px auto;
+  border-radius: 24px;
+  background: linear-gradient(150deg, #637fa7, #b7a6c9);
+  position: relative;
+  overflow: hidden;
+}
+
+.star {
+  position: absolute;
+  background: transparent;
+  border: 0;
+  color: #fff2c6;
+  font-size: 25px;
+  animation: twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle {
+  to { opacity: .3; transform: scale(.7); }
+}
+
+.final-heart {
+  font-size: 65px;
+  margin: 25px;
+}
+
+footer {
+  padding: 25px;
+  text-align: center;
+  background: #e5edfa;
+  font-size: 11px;
+  color: #8294ad;
+}
+
+@media(max-width: 500px) {
+  nav { padding: 12px; }
+  .navlinks { gap: 9px; }
+  .navlinks a { font-size: 10px; }
+  section { padding: 100px 19px 65px; }
+}
+
+@media(prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
