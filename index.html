@@ -1,0 +1,248 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#dcecff">
+<meta name="description" content="A little universe filled with memories, wishes and happiness.">
+<title>A Little Universe for Yasvani ♡</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="progress" id="progress"></div>
+
+<nav>
+  <div class="brand">for Yasvani ♡</div>
+  <div class="navlinks">
+    <a href="#home">Home</a>
+    <a href="#memories">Memories</a>
+    <a href="#letter">Letter</a>
+    <a href="#final">End</a>
+  </div>
+</nav>
+
+<!-- 01: WELCOME -->
+
+<section class="sky" id="home">
+  <div class="decor d1">✿</div>
+  <div class="decor d2">☁️</div>
+  <div class="inner reveal">
+    <div class="eyebrow">A little universe made for you</div>
+    <h1>Hey,<br><span class="accent">Yasvani.</span></h1>
+    <p class="subtitle">
+      Somewhere between the stars and the flowers,
+      there is a little place that belongs to you.
+    </p>
+    <div class="heart">🩵</div>
+    <a class="btn" href="#today">Enter your little world ✨</a>
+  </div>
+</section>
+
+<!-- 02: BIRTHDAY -->
+
+<section class="blush" id="today">
+  <div class="inner reveal">
+    <div class="eyebrow">A day worth celebrating</div>
+    <h2>Today is all about <span class="accent">you.</span></h2>
+    <p class="subtitle">
+      Another chapter, another collection of adventures,
+      laughter and beautiful discoveries.
+    </p>
+    <div style="font-size:75px;margin:30px">🎀</div>
+    <h3>Happy Birthday! ♡</h3>
+    <p class="subtitle">May life be gentle with your beautiful heart.</p>
+    <a class="btn" href="#reasons">Continue →</a>
+  </div>
+</section>
+
+<!-- 03: REASONS -->
+
+<section class="paper" id="reasons">
+  <div class="inner reveal">
+    <div class="eyebrow">A collection of little things</div>
+    <h2>Things that make you <span class="accent">special.</span></h2>
+    <p class="subtitle">Some things deserve to be appreciated more often.</p>
+
+    <div class="grid">
+      <div class="tile"><span>🌸</span><p>Your little moments of kindness.</p></div>
+      <div class="tile"><span>🦋</span><p>Your wonderfully unique personality.</p></div>
+      <div class="tile"><span>☁️</span><p>The way ordinary moments can feel special.</p></div>
+      <div class="tile"><span>✨</span><p>The happiness you bring to little moments.</p></div>
+    </div>
+    <a class="btn" href="#memories">Visit the scrapbook →</a>
+  </div>
+</section>
+
+<!-- 04: SCRAPBOOK -->
+
+<section class="sky" id="memories">
+  <div class="inner reveal">
+    <div class="eyebrow">A scrapbook of little moments</div>
+    <h2>Some moments deserve to <span class="accent">stay.</span></h2>
+    <p class="subtitle">Not every beautiful memory needs a photograph.</p>
+
+    <div class="timeline">
+      <div class="memory">
+        <h3>The beginning 🌷</h3>
+        <p>A little chapter that started with a simple hello.</p>
+      </div>
+      <div class="memory">
+        <h3>The laughter ☁️</h3>
+        <p>Those conversations that made ordinary days better.</p>
+      </div>
+      <div class="memory">
+        <h3>The unexpected moments 🦋</h3>
+        <p>Little surprises that became lovely memories.</p>
+      </div>
+      <div class="memory">
+        <h3>More chapters ahead ✨</h3>
+        <p>There are still so many memories to make.</p>
+      </div>
+    </div>
+    <a class="btn" href="#gallery">Photo memories →</a>
+  </div>
+</section>
+
+<!-- 05: GALLERY -->
+
+<section class="blush" id="gallery-section">
+  <div class="inner reveal">
+    <div class="eyebrow">Little moments, forever frames</div>
+    <h2>A gallery of <span class="accent">happiness.</span></h2>
+    <p class="subtitle">A place for favourite photographs and memories.</p>
+
+    <div class="gallery" id="gallery">
+      <div class="photo">🌷</div>
+      <div class="photo">🩵</div>
+      <div class="photo">🦋</div>
+      <div class="photo">✨</div>
+    </div>
+
+    <label class="btn" for="photoInput">＋ Add photographs</label>
+    <input id="photoInput" type="file" accept="image/*" multiple hidden>
+    <p class="subtitle" style="font-size:11px">
+      Photo previews are temporary in this version.
+    </p>
+    <a class="btn" href="#happiness">Next surprise →</a>
+  </div>
+</section>
+
+<!-- 06: HAPPINESS -->
+
+<section class="paper" id="happiness">
+  <div class="inner reveal">
+    <div class="eyebrow">A tiny happiness machine</div>
+    <h2>A pocket full of <span class="accent">sunshine.</span></h2>
+    <p class="subtitle">Whenever you need a little smile, open this box.</p>
+
+    <div class="wish-card">
+      <div style="font-size:35px">🎁</div>
+      <div id="wishText">Your little surprise is waiting...</div>
+      <button class="btn" onclick="newWish()">Give me a smile ♡</button>
+    </div>
+    <a class="btn" href="#cake">Something sweet →</a>
+  </div>
+</section>
+
+<!-- 07: CAKE -->
+
+<section class="sky" id="cake">
+  <div class="inner reveal">
+    <div class="eyebrow">One beautiful birthday tradition</div>
+    <h2>Make a <span class="accent">wish.</span></h2>
+    <p class="subtitle">Keep your little dream safe in your heart.</p>
+
+    <div id="flames" style="font-size:30px;margin-top:25px">🕯️ 🕯️ 🕯️</div>
+    <div class="cake">🎂</div>
+    <p id="cakeMessage">Three little candles, three little wishes.</p>
+    <button class="btn" onclick="blowCandles()">Blow out the candles ✨</button>
+    <a class="btn" href="#letter">A letter is waiting →</a>
+  </div>
+</section>
+
+<!-- 08: LETTER -->
+
+<section class="blush" id="letter">
+  <div class="inner reveal">
+    <div class="eyebrow">A little note, from the heart</div>
+    <h2>Something I wanted you to <span class="accent">read.</span></h2>
+
+    <div class="letter-card">
+      <div id="closedLetter">
+        <div style="font-size:55px">💌</div>
+        <h3>A letter for you</h3>
+        <p class="subtitle">A few words wrapped in a little love.</p>
+        <button class="btn" onclick="openLetter()">Open your letter ♡</button>
+      </div>
+
+      <div id="letterText">
+        <h3>Dear Yasvani,</h3>
+        <p>
+          If I could gift you something beyond all the
+          beautiful things in this world, it would be
+          the ability to see yourself through the eyes
+          of everyone who appreciates you.
+        </p>
+        <p>
+          I hope you never forget how worthy you are
+          of happiness, how much your dreams matter,
+          and how beautiful it is to simply be yourself.
+        </p>
+        <p>
+          May your difficult days become lighter,
+          your happiest days unforgettable, and
+          your heart always find reasons to smile.
+        </p>
+        <p>Keep growing. Keep dreaming. ♡</p>
+        <p style="text-align:right;color:#d98eaa">
+          With warmest wishes.
+        </p>
+      </div>
+    </div>
+    <a class="btn" href="#stars">One last surprise →</a>
+  </div>
+</section>
+
+<!-- 09: STARS -->
+
+<section class="sky" id="stars">
+  <div class="inner reveal">
+    <div class="eyebrow">A sky full of possibilities</div>
+    <h2>Choose a <span class="accent">little star.</span></h2>
+    <p class="subtitle">Tap a star to discover a little wish.</p>
+    <div class="star-sky" id="starSky"></div>
+    <p id="starMessage">Your star is waiting ✨</p>
+    <a class="btn" href="#final">Final page →</a>
+  </div>
+</section>
+
+<!-- 10: FINAL -->
+
+<section class="blush" id="final">
+  <div class="inner reveal">
+    <div class="eyebrow">And this is only the beginning</div>
+    <h1>Keep shining,<br><span class="accent">Yasvani.</span></h1>
+    <div class="final-heart">🩵</div>
+    <p class="subtitle">
+      May you find magic in ordinary mornings,
+      courage in difficult moments, laughter in
+      unexpected places and happiness in little things.
+    </p>
+    <h3 style="margin-top:25px">Happy Birthday, once again. ♡</h3>
+    <button class="btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+      Relive your little world ↺
+    </button>
+  </div>
+</section>
+
+<footer>
+  Made with care, little details and lots of ♡
+  <br>A Little Universe for Yasvani
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
